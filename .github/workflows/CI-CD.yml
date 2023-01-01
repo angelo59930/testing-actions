@@ -1,0 +1,13 @@
+name: CI-CD BASE
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+  
+  test:
+
+  deploy:
