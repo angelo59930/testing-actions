@@ -40,7 +40,6 @@ jobs:
 
   ssh:
     runs-on: ubuntu-latest
-    environment: production
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -49,4 +48,4 @@ jobs:
       - name: script build
         run: |
           # mostramos las keys
-          echo "ssh keys ${{ secrets.SSH_HOST }}"
+          ssh ${{SSH_USER}}@${{SSH_HOST}} -i ${{SSH_PASSWORD}} "ls -la"
