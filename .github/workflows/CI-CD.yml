@@ -25,7 +25,7 @@ jobs:
           fetch-depth: 0
       - name: script build
         run: echo "this is a test job"
-
+ 
   deploy:
     runs-on: ubuntu-latest
     steps:
