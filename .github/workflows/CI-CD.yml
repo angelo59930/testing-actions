@@ -48,4 +48,4 @@ jobs:
       - name: script build
         run: |
           # mostramos las keys
-          ssh ${{SSH_USER}}@${{SSH_HOST}} -i ${{SSH_PASSWORD}} "ls -la"
+          ssh ${{secret.SSH_USER}}@${{secret.SSH_HOST}} -i ${{secret.SSH_PASSWORD}} "ls -la"
