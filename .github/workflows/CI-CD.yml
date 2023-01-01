@@ -17,6 +17,7 @@ jobs:
         run: echo "This is a build job"
 
   test:
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -27,6 +28,7 @@ jobs:
         run: echo "this is a test job"
  
   deploy:
+    needs: [build, test]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
