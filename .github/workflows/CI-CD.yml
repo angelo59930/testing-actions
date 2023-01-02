@@ -53,4 +53,4 @@ jobs:
           password: ${{ secrets.SSH_PASSWORD }}
           script: |
             whoami
-            ls -la
+            ./deploys.sh
